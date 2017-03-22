@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Apresentacao", "1 - Apresentacao", "{CFD978F8-5389-473C-959B-403B520AA5C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WfaIntegracaoERPConcillius", "Apresentacao\WfaIntegracaoERPConcillius\WfaIntegracaoERPConcillius.csproj", "{190C3C62-AAD6-4DC5-BBEE-1DD809D4DC6B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Servico", "2 - Servico", "{A678E29C-FA81-4057-B189-830A9EC2DD46}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Dominio", "3 - Dominio", "{C77C7A8B-EF87-45B9-9072-FE28BD1588E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infraestrutura", "4 - Infraestrutura", "{D4F9D075-17B6-4805-B344-BC7C64CD6F95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiIntegracaoERPConcillius", "Servico\ApiIntegracaoERPConcillius\ApiIntegracaoERPConcillius.csproj", "{9D462391-CD62-4645-BE26-5256894585A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegracaoERPConcillius.Dominio", "Dominio\IntegracaoERPConcillius.Dominio\IntegracaoERPConcillius.Dominio.csproj", "{AEA02161-4AB1-4C30-9297-64E48146E75B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegracaoERPConcillius.Infraestrutura", "Infraestrutura\IntegracaoERPConcillius.Infraestrutura\IntegracaoERPConcillius.Infraestrutura.csproj", "{15C452A1-BEEF-48D2-94F5-00765DC92A8A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{190C3C62-AAD6-4DC5-BBEE-1DD809D4DC6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{190C3C62-AAD6-4DC5-BBEE-1DD809D4DC6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{190C3C62-AAD6-4DC5-BBEE-1DD809D4DC6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{190C3C62-AAD6-4DC5-BBEE-1DD809D4DC6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D462391-CD62-4645-BE26-5256894585A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D462391-CD62-4645-BE26-5256894585A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D462391-CD62-4645-BE26-5256894585A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D462391-CD62-4645-BE26-5256894585A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEA02161-4AB1-4C30-9297-64E48146E75B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEA02161-4AB1-4C30-9297-64E48146E75B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEA02161-4AB1-4C30-9297-64E48146E75B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEA02161-4AB1-4C30-9297-64E48146E75B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15C452A1-BEEF-48D2-94F5-00765DC92A8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15C452A1-BEEF-48D2-94F5-00765DC92A8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15C452A1-BEEF-48D2-94F5-00765DC92A8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15C452A1-BEEF-48D2-94F5-00765DC92A8A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{190C3C62-AAD6-4DC5-BBEE-1DD809D4DC6B} = {CFD978F8-5389-473C-959B-403B520AA5C4}
+		{9D462391-CD62-4645-BE26-5256894585A7} = {A678E29C-FA81-4057-B189-830A9EC2DD46}
+		{AEA02161-4AB1-4C30-9297-64E48146E75B} = {C77C7A8B-EF87-45B9-9072-FE28BD1588E8}
+		{15C452A1-BEEF-48D2-94F5-00765DC92A8A} = {D4F9D075-17B6-4805-B344-BC7C64CD6F95}
+	EndGlobalSection
+EndGlobal

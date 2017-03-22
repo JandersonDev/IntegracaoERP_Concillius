@@ -1,0 +1,16 @@
+C:\Users\49182\Documents\Visual Studio 2013\Projects\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\WfaIntegracaoERPConcillius.exe.config
+C:\Users\49182\Documents\Visual Studio 2013\Projects\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\WfaIntegracaoERPConcillius.exe
+C:\Users\49182\Documents\Visual Studio 2013\Projects\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\WfaIntegracaoERPConcillius.pdb
+C:\Users\49182\Documents\Visual Studio 2013\Projects\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.csprojResolveAssemblyReference.cache
+C:\Users\49182\Documents\Visual Studio 2013\Projects\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.Properties.Resources.resources
+C:\Users\49182\Documents\Visual Studio 2013\Projects\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.csproj.GenerateResource.Cache
+C:\Users\49182\Documents\Visual Studio 2013\Projects\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.exe
+C:\Users\49182\Documents\Visual Studio 2013\Projects\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.pdb
+C:\WorkspaceDotNet\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\WfaIntegracaoERPConcillius.exe.config
+C:\WorkspaceDotNet\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.exe
+C:\WorkspaceDotNet\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.pdb
+C:\WorkspaceDotNet\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\WfaIntegracaoERPConcillius.exe
+C:\WorkspaceDotNet\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\WfaIntegracaoERPConcillius.pdb
+C:\WorkspaceDotNet\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.csprojResolveAssemblyReference.cache
+C:\WorkspaceDotNet\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.Properties.Resources.resources
+C:\WorkspaceDotNet\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.csproj.GenerateResource.Cache

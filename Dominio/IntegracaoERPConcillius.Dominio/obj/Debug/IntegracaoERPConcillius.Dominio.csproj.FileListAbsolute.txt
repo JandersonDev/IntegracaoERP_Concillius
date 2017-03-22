@@ -1,0 +1,10 @@
+C:\Users\49182\Documents\Visual Studio 2013\Projects\IntegracaoERPConcillius\Dominio\IntegracaoERPConcillius.Dominio\bin\Debug\IntegracaoERPConcillius.Dominio.dll
+C:\Users\49182\Documents\Visual Studio 2013\Projects\IntegracaoERPConcillius\Dominio\IntegracaoERPConcillius.Dominio\bin\Debug\IntegracaoERPConcillius.Dominio.pdb
+C:\Users\49182\Documents\Visual Studio 2013\Projects\IntegracaoERPConcillius\Dominio\IntegracaoERPConcillius.Dominio\obj\Debug\IntegracaoERPConcillius.Dominio.csprojResolveAssemblyReference.cache
+C:\Users\49182\Documents\Visual Studio 2013\Projects\IntegracaoERPConcillius\Dominio\IntegracaoERPConcillius.Dominio\obj\Debug\IntegracaoERPConcillius.Dominio.dll
+C:\Users\49182\Documents\Visual Studio 2013\Projects\IntegracaoERPConcillius\Dominio\IntegracaoERPConcillius.Dominio\obj\Debug\IntegracaoERPConcillius.Dominio.pdb
+C:\WorkspaceDotNet\IntegracaoERPConcillius\Dominio\IntegracaoERPConcillius.Dominio\bin\Debug\IntegracaoERPConcillius.Dominio.dll
+C:\WorkspaceDotNet\IntegracaoERPConcillius\Dominio\IntegracaoERPConcillius.Dominio\bin\Debug\IntegracaoERPConcillius.Dominio.pdb
+C:\WorkspaceDotNet\IntegracaoERPConcillius\Dominio\IntegracaoERPConcillius.Dominio\obj\Debug\IntegracaoERPConcillius.Dominio.csprojResolveAssemblyReference.cache
+C:\WorkspaceDotNet\IntegracaoERPConcillius\Dominio\IntegracaoERPConcillius.Dominio\obj\Debug\IntegracaoERPConcillius.Dominio.dll
+C:\WorkspaceDotNet\IntegracaoERPConcillius\Dominio\IntegracaoERPConcillius.Dominio\obj\Debug\IntegracaoERPConcillius.Dominio.pdb
