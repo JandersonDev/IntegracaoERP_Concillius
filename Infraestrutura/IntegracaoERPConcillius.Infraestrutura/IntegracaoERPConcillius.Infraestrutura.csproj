@@ -35,6 +35,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -43,14 +44,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Contexto\Contexto.cs" />
     <Compile Include="Interface\IAcessoRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorio\AcessoRepositorio.cs" />
+    <Compile Include="Scripts\AcessoScript.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Scripts\" />
+    <ProjectReference Include="..\..\Dominio\IntegracaoERPConcillius.Dominio\IntegracaoERPConcillius.Dominio.csproj">
+      <Project>{AEA02161-4AB1-4C30-9297-64E48146E75B}</Project>
+      <Name>IntegracaoERPConcillius.Dominio</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

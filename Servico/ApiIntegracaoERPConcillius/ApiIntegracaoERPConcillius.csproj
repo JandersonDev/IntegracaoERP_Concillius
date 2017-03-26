@@ -172,7 +172,9 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -189,7 +191,16 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\Dominio\IntegracaoERPConcillius.Dominio\IntegracaoERPConcillius.Dominio.csproj">
+      <Project>{AEA02161-4AB1-4C30-9297-64E48146E75B}</Project>
+      <Name>IntegracaoERPConcillius.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infraestrutura\IntegracaoERPConcillius.Infraestrutura\IntegracaoERPConcillius.Infraestrutura.csproj">
+      <Project>{15C452A1-BEEF-48D2-94F5-00765DC92A8A}</Project>
+      <Name>IntegracaoERPConcillius.Infraestrutura</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
