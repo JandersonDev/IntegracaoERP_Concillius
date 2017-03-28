@@ -22,8 +22,14 @@ namespace WfaIntegracaoERPConcillius
 
             //string PATH = @"SOFTWARE\Concillius";
 
+            using (var hklm = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64))
+            using (var key = hklm.OpenSubKey(@"SOFTWARE\TESTE"))
+            {
+                var t = key.GetValue("Teste1");
+            }
+
             //RegistryKey registryKey = Registry.LocalMachine.OpenSubKey("SOFTWARE\\gitforwindows");
-           
+
             //RegistryKey registryKey = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Concillius\\CNPJ");
 
             //Console.WriteLine(registryKey.GetValue("Padão"));
