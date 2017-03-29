@@ -1,12 +1,14 @@
 ﻿using IntegracaoERPConcillius.Infraestrutura.Interface;
+using IntegracaoERPConcillius.Infraestrutura.Repositorio;
+using IntegracaoERPConcillius.Dominio.Acesso;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Web;
 using System.Web.Http;
 using System.Net.Http;
-using IntegracaoERPConcillius.Infraestrutura.Repositorio;
-using IntegracaoERPConcillius.Dominio.Acesso;
+
 
 namespace ApiIntegracaoERPConcillius.Controllers
 {
@@ -21,13 +23,6 @@ namespace ApiIntegracaoERPConcillius.Controllers
         public AcessoController()
         {
             repositorio = new AcessoRepositorio();
-        }
-        
-        [HttpGet]
-        public IHttpActionResult LocalizaNumeroHistorico()
-        {
-            List<int> retorno = repositorio.LocalizaNumeroHistorico();
-            return Ok(retorno);
         }
         
         [HttpGet]

@@ -98,3 +98,5 @@ C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\Integr
 C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\Dapper.dll
 C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\IntegracaoERPConcillius.Infraestrutura.pdb
 C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\Dapper.xml
+C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\IntegracaoERPConcillius.Dominio.dll
+C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\IntegracaoERPConcillius.Dominio.pdb

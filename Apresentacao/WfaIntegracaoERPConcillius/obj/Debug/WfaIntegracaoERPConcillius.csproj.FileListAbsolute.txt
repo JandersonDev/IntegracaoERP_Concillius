@@ -26,4 +26,6 @@ C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\D
 C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\Dapper.dll
 C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\IntegracaoERPConcillius.Infraestrutura.pdb
 C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\Dapper.xml
-C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.Form1.resources
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\IntegracaoERPConcillius.Dominio.dll
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\IntegracaoERPConcillius.Dominio.pdb
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.FrmCargaVendas.resources

@@ -21,22 +21,6 @@ namespace IntegracaoERPConcillius.Infraestrutura.Repositorio
             this.stringConexao = ConfigurationManager.ConnectionStrings["IntegracaoContext"].ConnectionString;
         }
         
-        public List<int> LocalizaNumeroHistorico()
-        {
-            var idHistorico = new List<int>();
-
-            var query = AcessoScript.LocalizaNumeroHistoricoData();
-
-            var parametros = new {DataMovimento = "19/02/2017" };
-
-            using (var conexao = new SqlConnection(this.stringConexao))
-            {
-                idHistorico = conexao.Query<int>(query, parametros).ToList();
-            }
-
-            return idHistorico;
-        }
-
         public Acesso RetornaAcesso(string Cnpj)
         {
             var acesso = new Acesso();

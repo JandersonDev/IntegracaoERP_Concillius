@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Acesso\Acesso.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="GravaVenda\VendasPdvDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

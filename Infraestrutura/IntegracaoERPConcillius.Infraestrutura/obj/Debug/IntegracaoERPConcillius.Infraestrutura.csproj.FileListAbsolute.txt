@@ -15,3 +15,5 @@ C:\Github\IntegracaoERP_Concillius\Infraestrutura\IntegracaoERPConcillius.Infrae
 C:\Github\IntegracaoERP_Concillius\Infraestrutura\IntegracaoERPConcillius.Infraestrutura\bin\Debug\IntegracaoERPConcillius.Infraestrutura.pdb
 C:\Github\IntegracaoERP_Concillius\Infraestrutura\IntegracaoERPConcillius.Infraestrutura\bin\Debug\Dapper.dll
 C:\Github\IntegracaoERP_Concillius\Infraestrutura\IntegracaoERPConcillius.Infraestrutura\bin\Debug\Dapper.xml
+C:\Github\IntegracaoERP_Concillius\Infraestrutura\IntegracaoERPConcillius.Infraestrutura\bin\Debug\IntegracaoERPConcillius.Dominio.dll
+C:\Github\IntegracaoERP_Concillius\Infraestrutura\IntegracaoERPConcillius.Infraestrutura\bin\Debug\IntegracaoERPConcillius.Dominio.pdb

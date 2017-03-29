@@ -9,8 +9,6 @@ namespace IntegracaoERPConcillius.Infraestrutura.Interface
 {
     public interface IAcessoRepositorio
     {
-       List<int> LocalizaNumeroHistorico();
-
         Acesso RetornaAcesso(string Cnpj);
     }
 }
