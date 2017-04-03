@@ -1,31 +1,46 @@
-C:\Users\49182\Documents\Visual Studio 2013\Projects\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\WfaIntegracaoERPConcillius.exe.config
-C:\Users\49182\Documents\Visual Studio 2013\Projects\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\WfaIntegracaoERPConcillius.exe
-C:\Users\49182\Documents\Visual Studio 2013\Projects\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\WfaIntegracaoERPConcillius.pdb
-C:\Users\49182\Documents\Visual Studio 2013\Projects\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.csprojResolveAssemblyReference.cache
-C:\Users\49182\Documents\Visual Studio 2013\Projects\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.Properties.Resources.resources
-C:\Users\49182\Documents\Visual Studio 2013\Projects\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.csproj.GenerateResource.Cache
-C:\Users\49182\Documents\Visual Studio 2013\Projects\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.exe
-C:\Users\49182\Documents\Visual Studio 2013\Projects\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.pdb
-C:\WorkspaceDotNet\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\WfaIntegracaoERPConcillius.exe.config
-C:\WorkspaceDotNet\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.exe
-C:\WorkspaceDotNet\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.pdb
-C:\WorkspaceDotNet\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\WfaIntegracaoERPConcillius.exe
-C:\WorkspaceDotNet\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\WfaIntegracaoERPConcillius.pdb
-C:\WorkspaceDotNet\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.csprojResolveAssemblyReference.cache
-C:\WorkspaceDotNet\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.Properties.Resources.resources
-C:\WorkspaceDotNet\IntegracaoERPConcillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.csproj.GenerateResource.Cache
 C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\WfaIntegracaoERPConcillius.exe.config
-C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.exe
-C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.pdb
 C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\WfaIntegracaoERPConcillius.exe
 C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\WfaIntegracaoERPConcillius.pdb
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\ApiIntegracaoERPConcillius.dll
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\IntegracaoERPConcillius.Infraestrutura.dll
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\Newtonsoft.Json.dll
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\System.Net.Http.dll
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\System.Net.Http.Formatting.dll
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\System.Security.Cryptography.Encoding.dll
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\System.Security.Cryptography.Primitives.dll
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\IntegracaoERPConcillius.Dominio.dll
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\Dapper.dll
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\System.Web.Optimization.dll
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\System.Web.Mvc.dll
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\System.Web.Http.dll
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\System.Web.Http.WebHost.dll
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\WebGrease.dll
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\System.Web.Razor.dll
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\System.Web.WebPages.dll
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\Antlr3.Runtime.dll
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\IntegracaoERPConcillius.Infraestrutura.pdb
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\ApiIntegracaoERPConcillius.pdb
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\Newtonsoft.Json.xml
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\System.Net.Http.Formatting.xml
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\IntegracaoERPConcillius.Dominio.pdb
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\Dapper.xml
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\System.Web.Optimization.xml
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\System.Web.Mvc.xml
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\System.Web.Http.xml
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\System.Web.Http.WebHost.xml
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\System.Web.Razor.xml
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\System.Web.WebPages.xml
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\Antlr3.Runtime.pdb
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.csprojResolveAssemblyReference.cache
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.FrmCargaVendas.resources
 C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.Properties.Resources.resources
 C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.csproj.GenerateResource.Cache
-C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\IntegracaoERPConcillius.Infraestrutura.dll
-C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\Dapper.dll
-C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\IntegracaoERPConcillius.Infraestrutura.pdb
-C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\Dapper.xml
-C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\IntegracaoERPConcillius.Dominio.dll
-C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\bin\Debug\IntegracaoERPConcillius.Dominio.pdb
-C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.FrmCargaVendas.resources
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.exe
+C:\Github\IntegracaoERP_Concillius\Apresentacao\WfaIntegracaoERPConcillius\obj\Debug\WfaIntegracaoERPConcillius.pdb

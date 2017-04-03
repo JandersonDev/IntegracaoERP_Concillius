@@ -23,9 +23,9 @@ namespace ApiIntegracaoERPConcillius.Controllers
             repositorio = new GravaVendaRepositoiro();
         }
         [HttpGet]
-        public IHttpActionResult Verificar(string dataVenda)
+        public IHttpActionResult Verificar(string dataVenda, string nomeDbCompleto)
         {
-            List<int> retorno = repositorio.Verificar(dataVenda);
+            int retorno = repositorio.Verificar(dataVenda, nomeDbCompleto);
             return Ok(retorno);
         }
         [HttpGet]

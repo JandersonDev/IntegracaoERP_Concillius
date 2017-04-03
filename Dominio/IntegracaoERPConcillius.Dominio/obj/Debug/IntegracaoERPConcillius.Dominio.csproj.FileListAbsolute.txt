@@ -10,6 +10,5 @@ C:\WorkspaceDotNet\IntegracaoERPConcillius\Dominio\IntegracaoERPConcillius.Domin
 C:\WorkspaceDotNet\IntegracaoERPConcillius\Dominio\IntegracaoERPConcillius.Dominio\obj\Debug\IntegracaoERPConcillius.Dominio.pdb
 C:\Github\IntegracaoERP_Concillius\Dominio\IntegracaoERPConcillius.Dominio\bin\Debug\IntegracaoERPConcillius.Dominio.dll
 C:\Github\IntegracaoERP_Concillius\Dominio\IntegracaoERPConcillius.Dominio\bin\Debug\IntegracaoERPConcillius.Dominio.pdb
-C:\Github\IntegracaoERP_Concillius\Dominio\IntegracaoERPConcillius.Dominio\obj\Debug\IntegracaoERPConcillius.Dominio.csprojResolveAssemblyReference.cache
 C:\Github\IntegracaoERP_Concillius\Dominio\IntegracaoERPConcillius.Dominio\obj\Debug\IntegracaoERPConcillius.Dominio.dll
 C:\Github\IntegracaoERP_Concillius\Dominio\IntegracaoERPConcillius.Dominio\obj\Debug\IntegracaoERPConcillius.Dominio.pdb

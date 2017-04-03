@@ -12,11 +12,12 @@ namespace IntegracaoERPConcillius.Infraestrutura.Scripts
         {
             var sql = new StringBuilder();
 
-            sql.AppendLine("SET DATEFORMAT DMY                   ")
-               .AppendLine("SELECT ID_HISTORICO_ATUALIZACAO     ")
-               .AppendLine("FROM Conciliacao_Cartao_BC..HISTORICO_ATUALIZACAO           ")
-               .AppendLine("WHERE DATA_MOVIMENTO = @DATAVENDA");
-
+            sql.AppendLine("DECLARE @STRSQL VARCHAR (MAX)                   ")
+               .AppendLine("DECLARE @DATABASENAMEPARAMETER VARCHAR (100) =  @NOME_BD_COMPLETO                 ")
+               .AppendLine("SET @STRSQL = ' SET DATEFORMAT DMY SELECT  COUNT(*) FROM ' +  @DATABASENAMEPARAMETER + '.DBO.VENDAS_PDV' + ' WHERE DATA_VENDA = ' + @DATAVENDA")
+               .AppendLine("EXEC(@STRSQL)");     
+               
+            
             return sql.ToString();
         }
 
@@ -33,7 +34,7 @@ namespace IntegracaoERPConcillius.Infraestrutura.Scripts
         {
             var sql = new StringBuilder();
 
-            sql.AppendLine(" BEGIN TRAN																																")
+            sql.AppendLine(" --BEGIN TRAN																																")
                .AppendLine(" Se @HISTORICO <> 0																														")
                .AppendLine("    DELETE Conciliacao_Cartao_BC..VENDAS_PDV            WHERE ID_HISTORICO_ATUALIZACAO = @HISTORICO										")
                .AppendLine("    DELETE Conciliacao_Cartao_BC..HISTORICO_ATUALIZACAO WHERE ID_HISTORICO_ATUALIZACAO = @HISTORICO										")

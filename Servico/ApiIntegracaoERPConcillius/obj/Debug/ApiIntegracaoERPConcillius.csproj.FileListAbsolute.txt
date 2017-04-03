@@ -66,6 +66,8 @@ C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\ApiInt
 C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\ApiIntegracaoERPConcillius.dll
 C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\ApiIntegracaoERPConcillius.pdb
 C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\Antlr3.Runtime.dll
+C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\IntegracaoERPConcillius.Dominio.dll
+C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\IntegracaoERPConcillius.Infraestrutura.dll
 C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\Microsoft.Web.Infrastructure.dll
 C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\Newtonsoft.Json.dll
 C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\System.Net.Http.Formatting.dll
@@ -79,6 +81,9 @@ C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\System
 C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\System.Web.WebPages.dll
 C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\System.Web.WebPages.Razor.dll
 C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\WebGrease.dll
+C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\Dapper.dll
+C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\IntegracaoERPConcillius.Dominio.pdb
+C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\IntegracaoERPConcillius.Infraestrutura.pdb
 C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\Newtonsoft.Json.xml
 C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\System.Net.Http.Formatting.xml
 C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\System.Web.Helpers.xml
@@ -91,12 +96,7 @@ C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\System
 C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\System.Web.WebPages.Deployment.xml
 C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\System.Web.WebPages.Razor.xml
 C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\Antlr3.Runtime.pdb
+C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\Dapper.xml
 C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\obj\Debug\ApiIntegracaoERPConcillius.csprojResolveAssemblyReference.cache
 C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\obj\Debug\ApiIntegracaoERPConcillius.dll
 C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\obj\Debug\ApiIntegracaoERPConcillius.pdb
-C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\IntegracaoERPConcillius.Infraestrutura.dll
-C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\Dapper.dll
-C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\IntegracaoERPConcillius.Infraestrutura.pdb
-C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\Dapper.xml
-C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\IntegracaoERPConcillius.Dominio.dll
-C:\Github\IntegracaoERP_Concillius\Servico\ApiIntegracaoERPConcillius\bin\IntegracaoERPConcillius.Dominio.pdb

@@ -1,15 +1,12 @@
 ﻿using IntegracaoERPConcillius.Infraestrutura.Repositorio;
 using Microsoft.Win32;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Configuration;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using ApiIntegracaoERPConcillius.Classes;
+using System.Net.Http;
+using System.Collections.Generic;
+using IntegracaoERPConcillius.Dominio.Acesso;
 
 namespace WfaIntegracaoERPConcillius
 {
@@ -17,6 +14,7 @@ namespace WfaIntegracaoERPConcillius
     {
         private string CNPJ;
         private string UrlBase;
+        private Acesso acesso;
         
         public FrmCargaVendas()
         {
@@ -55,21 +53,51 @@ namespace WfaIntegracaoERPConcillius
 
         private void btnExecutar_Click(object sender, EventArgs e)
         {
+             
             if (!ValidarDataValida())
             {
                 MessageBox.Show("Data informada deve ser menor que a data atual!","Atenção",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
 
             if (this.CNPJ == string.Empty)
             {
                 MessageBox.Show("Erro ao ler chave CNPJ no regedit!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
-            //var param = "CentroDistribuicao/ConsultaParametroAplicativoAutomatico?codigoDeposito=" + codigoDeposito;
-            //var resposta = Http.Get(UrlBase, param);
-            //var result = resposta.Content.ReadAsAsync<string>().Result;
-            //return !result.Equals("D");
+            try
+            {
+                acesso = ConsultarAcesso();
 
+                if (acesso.NomeDbCliente == null)
+                {
+                    MessageBox.Show("Banco do cliente não existe!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                    
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+        private Acesso ConsultarAcesso()
+        {
+            try
+            {
+                var param = "Acesso/RetornaAcesso?cnpj=" + this.CNPJ;
+                var resposta = RequisicaoHttp.Get(UrlBase, param);
+                return resposta.Content.ReadAsAsync<Acesso>().Result;
+            }
+            catch (Exception)
+            {
+                throw new Exception("Erro ao consultar api acesso!");
+            }
+            
         }
 
         private bool ValidarDataValida()

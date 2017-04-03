@@ -20,17 +20,17 @@ namespace IntegracaoERPConcillius.Infraestrutura.Repositorio
             this.stringConexao = ConfigurationManager.ConnectionStrings["IntegracaoContext"].ConnectionString;
         }
 
-        public List<int> Verificar(string dataVenda)
+        public int Verificar(string dataVenda, string nomeDbCompleto)
         {
-            var idHistorico = new List<int>();
+            var idHistorico = 0;
 
             var query = GravaVendaScript.Verificar();
 
-            var parametros = new { DATAVENDA = dataVenda };
+            var parametros = new { DATAVENDA = dataVenda, NOME_BD_COMPLETO = nomeDbCompleto };
 
             using (var conexao = new SqlConnection(this.stringConexao))
             {
-                idHistorico = conexao.Query<int>(query, parametros).ToList();
+                idHistorico = conexao.Query<int>(query, parametros).FirstOrDefault();
             }
 
             return idHistorico;

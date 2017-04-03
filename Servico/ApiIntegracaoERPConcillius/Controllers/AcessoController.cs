@@ -26,9 +26,9 @@ namespace ApiIntegracaoERPConcillius.Controllers
         }
         
         [HttpGet]
-        public IHttpActionResult RetornaAcesso(string Cnpj)
+        public IHttpActionResult RetornaAcesso(string cnpj)
         {
-            Acesso retorno = repositorio.RetornaAcesso(Cnpj);
+            Acesso retorno = repositorio.RetornaAcesso(cnpj);
             return Ok(retorno);
         }
     }
