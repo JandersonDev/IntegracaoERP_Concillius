@@ -11,6 +11,6 @@ namespace IntegracaoERPConcillius.Infraestrutura.Interface
     {
         int Verificar(string dataVenda, string nomeDbCompleto);
         List<VendasPdvDTO> spVendasPdv(string dataVenda);
-        void Movimentacao(string hitorico);
+        int Gravar(int hitorico, VendasPdvDTO venda);
     }
 }

@@ -7,6 +7,7 @@ using ApiIntegracaoERPConcillius.Classes;
 using System.Net.Http;
 using System.Collections.Generic;
 using IntegracaoERPConcillius.Dominio.Acesso;
+using IntegracaoERPConcillius.Dominio.GravaVenda;
 
 namespace WfaIntegracaoERPConcillius
 {
@@ -15,7 +16,8 @@ namespace WfaIntegracaoERPConcillius
         private string CNPJ;
         private string UrlBase;
         private Acesso acesso;
-        
+        private List<VendasPdvDTO> vendas;
+
         public FrmCargaVendas()
         {
             InitializeComponent();
@@ -76,12 +78,79 @@ namespace WfaIntegracaoERPConcillius
                     return;
                 }
 
-                    
+                int historico = Verificar();
+
+                if (historico != 0)
+                {
+                    if (MessageBox.Show("Carga já efetuada, deseja sobrepor?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        //Gravar
+                        this.vendas = RetornaListaVendasPDV();
+
+                        Gravar(historico);
+                        
+
+                        MessageBox.Show("Operação efetuada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                    else
+                    {
+                        dthDataVenda.Value = DateTime.Now;
+                        return;
+                    }
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }
+        }
+
+        private void Gravar(int historico)
+        {
+            try
+            {
+                var param = "GravaVenda/Gravar?historico=" + historico ;
+                var resposta = RequisicaoHttp.Post(UrlBase,param, this.vendas);
+                var retorno = resposta.Content.ReadAsAsync<int>().Result;
+                return;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            throw new NotImplementedException();
+        }
+
+        private List<VendasPdvDTO> RetornaListaVendasPDV()
+        {
+            try
+            {
+                var data = dthDataVenda.Value.ToShortDateString();
+                var param = "GravaVenda/spVendasPdv?dataVenda=" + data;
+                var resposta = RequisicaoHttp.Get(UrlBase, param);
+                return resposta.Content.ReadAsAsync<List<VendasPdvDTO>>().Result;
+            }
+            catch (Exception)
+            {
+                throw new Exception("Erro no método spVendasPdv api grava venda!");
+            }
+        }
+
+        private int Verificar()
+        {
+            try
+            {
+                var data = dthDataVenda.Value.ToShortDateString();
+                var param = "GravaVenda/Verificar?dataVenda=" + data + "&nomeDbCompleto=" + this.acesso.NomeDbCompleto;
+                var resposta = RequisicaoHttp.Get(UrlBase, param);
+                return resposta.Content.ReadAsAsync<int>().Result;
+            }
+            catch (Exception)
+            {
+                throw new Exception("Erro no método verficar api grava venda!");
             }
         }
 

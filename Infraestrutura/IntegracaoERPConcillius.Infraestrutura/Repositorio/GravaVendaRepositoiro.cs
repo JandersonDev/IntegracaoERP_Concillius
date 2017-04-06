@@ -52,20 +52,21 @@ namespace IntegracaoERPConcillius.Infraestrutura.Repositorio
             return vendas;
         }
 
-        public void Movimentacao(string hitorico)
+        public int Gravar(int hitorico, VendasPdvDTO venda)
         {
             try
             {
                 
                 var query = GravaVendaScript.Movimentacao();
 
-                var parametros = new { HISTORICO = hitorico };
+                var parametros = new { HISTORICO = hitorico, DATAVENDA = venda.datasessaocaixa.ToShortDateString(), CD_MVE = venda.CD_MVE, COD_LOJA = venda.Cod_loja, DATASESSAOCAIXA = venda.datasessaocaixa, NSU = venda.NSU, NUMPARCELAS = venda.NUMPARCELAS, VALOR = venda.VALOR };
 
                 using (var conexao = new SqlConnection(this.stringConexao))
                 {
                     conexao.Query<string>(query, parametros);
                 }
-                
+
+                return 0;
             }
             catch (SqlException ex)
             {

@@ -23,18 +23,26 @@ namespace IntegracaoERPConcillius.Infraestrutura.Repositorio
         
         public Acesso RetornaAcesso(string Cnpj)
         {
-            var acesso = new Acesso();
-
-            var query = AcessoScript.RetornaAcesso();
-
-            var parametros = new { CNPJ = Cnpj };
-
-            using (var conexao = new SqlConnection(this.stringConexao))
+            try
             {
-                acesso = conexao.Query<Acesso>(query, parametros).FirstOrDefault();
-            }
+                Acesso acesso;
 
-            return acesso;
+                var query = AcessoScript.RetornaAcesso();
+
+                var parametros = new { CNPJ = Cnpj };
+
+                using (var conexao = new SqlConnection(this.stringConexao))
+                {
+                    acesso = conexao.Query<Acesso>(query, parametros).FirstOrDefault();
+                }
+
+                return acesso;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+          
         }
     }
 }

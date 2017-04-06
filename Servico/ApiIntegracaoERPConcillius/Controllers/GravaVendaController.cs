@@ -36,11 +36,15 @@ namespace ApiIntegracaoERPConcillius.Controllers
             return Ok(retorno);
 
         }
-        [HttpGet]
-        public IHttpActionResult Movimentacao(string hitorico)
+        [HttpPost]
+        public IHttpActionResult Gravar(int historico, List<VendasPdvDTO> vendas)
         {
-            repositorio.Movimentacao(hitorico);
-            return Ok();
+            foreach (var venda in vendas)
+            {
+                int retorno = repositorio.Gravar(historico, venda);
+            }
+
+            return Ok(0);
         }
     }
 }
