@@ -29,9 +29,9 @@ namespace ApiIntegracaoERPConcillius.Controllers
             return Ok(retorno);
         }
         [HttpGet]
-        public IHttpActionResult spVendasPdv(string dataVenda)
+        public IHttpActionResult spVendasPdv(string dataVenda, string nomeDbCompleto)
         {
-            List<VendasPdvDTO> retorno = repositorio.spVendasPdv(dataVenda);
+            List<VendasPdvDTO> retorno = repositorio.spVendasPdv(dataVenda, nomeDbCompleto);
 
             return Ok(retorno);
 

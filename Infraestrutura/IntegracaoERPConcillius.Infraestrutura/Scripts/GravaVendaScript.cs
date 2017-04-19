@@ -30,7 +30,11 @@ namespace IntegracaoERPConcillius.Infraestrutura.Scripts
         {
             var sql = new StringBuilder();
 
-            sql.AppendLine("EXEC BABY_CENTER..sp_ws_Vendas_PDV @DATA");
+            //sql.AppendLine("EXEC BABY_CENTER..sp_ws_Vendas_PDV @DATA");
+
+            sql.AppendLine(" declare @sql varchar(max) ")
+               .AppendLine(" set @sql = 'set dateformat dmy EXEC ' + @BANCO + '.dbo.sp_ws_Vendas_PDV ''' + @DATA + '''' ")
+               .AppendLine(" exec(@sql) ");
 
             return sql.ToString();
         }

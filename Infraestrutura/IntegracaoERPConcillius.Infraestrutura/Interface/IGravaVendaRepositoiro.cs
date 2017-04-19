@@ -10,7 +10,7 @@ namespace IntegracaoERPConcillius.Infraestrutura.Interface
     public interface IGravaVendaRepositoiro
     {
         int Verificar(string dataVenda, string nomeDbCompleto);
-        List<VendasPdvDTO> spVendasPdv(string dataVenda);
+        List<VendasPdvDTO> spVendasPdv(string dataVenda, string nomeBanco);
         int Gravar(int hitorico, VendasPdvDTO venda);
     }
 }

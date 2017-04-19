@@ -131,7 +131,7 @@ namespace WfaIntegracaoERPConcillius
             try
             {
                 var data = dthDataVenda.Value.ToShortDateString();
-                var param = "GravaVenda/spVendasPdv?dataVenda=" + data;
+                var param = "GravaVenda/spVendasPdv?dataVenda=" + data + "&nomeDbCompleto=" + this.acesso.NomeDbCliente;
                 var resposta = RequisicaoHttp.Get(UrlBase, param);
                 return resposta.Content.ReadAsAsync<List<VendasPdvDTO>>().Result;
             }

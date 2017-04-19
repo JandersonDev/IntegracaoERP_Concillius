@@ -36,13 +36,13 @@ namespace IntegracaoERPConcillius.Infraestrutura.Repositorio
             return idHistorico;
         }
 
-        public List<VendasPdvDTO> spVendasPdv(string dataVenda)
+        public List<VendasPdvDTO> spVendasPdv(string dataVenda, string nomeBanco)
         {
             List<VendasPdvDTO> vendas = new List<VendasPdvDTO>();
 
             var query = GravaVendaScript.spVendasPdv();
 
-            var parametros = new { DATA = dataVenda };
+            var parametros = new { DATA = dataVenda, BANCO = nomeBanco};
 
             using (var conexao = new SqlConnection(this.stringConexao))
             {
