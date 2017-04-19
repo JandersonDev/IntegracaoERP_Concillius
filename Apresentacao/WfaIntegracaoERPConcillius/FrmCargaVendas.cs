@@ -84,14 +84,8 @@ namespace WfaIntegracaoERPConcillius
                 {
                     if (MessageBox.Show("Carga já efetuada, deseja sobrepor?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        //Gravar
                         this.vendas = RetornaListaVendasPDV();
-
                         Gravar(historico);
-                        
-
-                        MessageBox.Show("Operação efetuada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        return;
                     }
                     else
                     {
@@ -99,6 +93,14 @@ namespace WfaIntegracaoERPConcillius
                         return;
                     }
                 }
+                else
+                {
+                    this.vendas = RetornaListaVendasPDV();
+                    Gravar(historico);
+                }
+
+                MessageBox.Show("Operação efetuada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
             catch (Exception ex)
             {

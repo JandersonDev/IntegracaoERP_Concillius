@@ -12,11 +12,16 @@ namespace IntegracaoERPConcillius.Infraestrutura.Scripts
         {
             var sql = new StringBuilder();
 
-            sql.AppendLine("DECLARE @STRSQL VARCHAR (MAX)                   ")
-               .AppendLine("DECLARE @DATABASENAMEPARAMETER VARCHAR (100) =  @NOME_BD_COMPLETO                 ")
-               .AppendLine("SET @STRSQL = ' SET DATEFORMAT DMY SELECT  COUNT(*) FROM ' +  @DATABASENAMEPARAMETER + '.DBO.VENDAS_PDV' + ' WHERE DATA_VENDA = ' + @DATAVENDA")
-               .AppendLine("EXEC(@STRSQL)");     
-               
+            //sql.AppendLine("DECLARE @STRSQL VARCHAR (MAX)                   ")
+            //   .AppendLine("DECLARE @DATABASENAMEPARAMETER VARCHAR (100) =  @NOME_BD_COMPLETO                 ")
+            //   .AppendLine("SET @STRSQL = ' SET DATEFORMAT DMY SELECT  COUNT(*) FROM ' +  @DATABASENAMEPARAMETER + '.DBO.VENDAS_PDV' + ' WHERE DATA_VENDA = ' + @DATAVENDA")
+            //   .AppendLine("EXEC(@STRSQL)");     
+
+            sql.AppendLine(" declare @sql varchar(max)  ")
+               .AppendLine(" declare @NomeBanco varchar(max)  ")
+               .AppendLine(" set @NomeBanco = @NOME_BD_COMPLETO  ")
+               .AppendLine(" set @sql = 'set dateformat dmy select id_historico_atualizacao from ' + @NomeBanco + '.dbo.historico_atualizacao where TIPO_ATUALIZACAO = ''O'' and ID_ADMINISTRADORA = 1 and DATA_MOVIMENTO = ''' + @DATAVENDA + ''''  ")
+               .AppendLine(" exec(@sql)  ");
             
             return sql.ToString();
         }
