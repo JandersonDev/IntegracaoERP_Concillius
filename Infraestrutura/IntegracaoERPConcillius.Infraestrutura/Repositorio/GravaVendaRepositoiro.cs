@@ -55,8 +55,7 @@ namespace IntegracaoERPConcillius.Infraestrutura.Repositorio
         public int Gravar(int hitorico, VendasPdvDTO venda)
         {
             try
-            {
-                
+            {   
                 var query = GravaVendaScript.Movimentacao();
 
                 var parametros = new { HISTORICO = hitorico, DATAVENDA = venda.datasessaocaixa.ToShortDateString(), CD_MVE = venda.CD_MVE, COD_LOJA = venda.Cod_loja, DATASESSAOCAIXA = venda.datasessaocaixa, NSU = venda.NSU, NUMPARCELAS = venda.NUMPARCELAS, VALOR = venda.VALOR };
@@ -74,6 +73,31 @@ namespace IntegracaoERPConcillius.Infraestrutura.Repositorio
                 throw;
             }
             
+        }
+
+        public int GerarIdHistoricoAtualizacao(int hitorico, string dataVenda, string nomeDbCompleto)
+        {
+            try
+            {
+                int retorno = 0;
+
+                var query = GravaVendaScript.GerarIdHistoricoAtualizacao();
+
+                var parametros = new { ID_HISTORICO = hitorico, DATAVENDA = dataVenda, NOME_BD_COMPLETO = nomeDbCompleto};
+
+                using (var conexao = new SqlConnection(this.stringConexao))
+                {
+                    retorno = conexao.Query<int>(query, parametros).FirstOrDefault();
+                }
+
+                return retorno;
+            }
+            catch (SqlException ex)
+            {
+
+                throw;
+            }
+
         }
     }
 }
