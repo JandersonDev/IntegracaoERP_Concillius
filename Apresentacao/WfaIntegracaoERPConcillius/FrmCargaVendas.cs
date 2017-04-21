@@ -113,7 +113,8 @@ namespace WfaIntegracaoERPConcillius
         {
             try
             {
-                var param = "GravaVenda/Gravar?historico=" + historico ;
+                var data = dthDataVenda.Value.ToShortDateString();
+                var param = "GravaVenda/Gravar?historico=" + historico + "&dataVenda=" + data + "&nomeDbCompleto=" + this.acesso.NomeDbCompleto;
                 var resposta = RequisicaoHttp.Post(UrlBase,param, this.vendas);
                 var retorno = resposta.Content.ReadAsAsync<int>().Result;
                 return;
