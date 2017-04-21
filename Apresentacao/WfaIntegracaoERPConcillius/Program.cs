@@ -16,7 +16,7 @@ namespace WfaIntegracaoERPConcillius
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmCargaVendas());
+            Application.Run(new MDIIntegracaoConcillius());
         }
     }
 }

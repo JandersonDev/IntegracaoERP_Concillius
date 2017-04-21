@@ -31,6 +31,7 @@
             this.dthDataVenda = new System.Windows.Forms.DateTimePicker();
             this.btnExecutar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSair = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,9 +45,9 @@
             // btnExecutar
             // 
             this.btnExecutar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExecutar.Location = new System.Drawing.Point(68, 84);
+            this.btnExecutar.Location = new System.Drawing.Point(28, 84);
             this.btnExecutar.Name = "btnExecutar";
-            this.btnExecutar.Size = new System.Drawing.Size(109, 37);
+            this.btnExecutar.Size = new System.Drawing.Size(84, 30);
             this.btnExecutar.TabIndex = 1;
             this.btnExecutar.Text = "Executar";
             this.btnExecutar.UseVisualStyleBackColor = true;
@@ -63,11 +64,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Data Venda";
             // 
+            // btnSair
+            // 
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Location = new System.Drawing.Point(134, 84);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(84, 30);
+            this.btnSair.TabIndex = 4;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // FrmCargaVendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(244, 148);
+            this.ClientSize = new System.Drawing.Size(244, 139);
+            this.Controls.Add(this.btnSair);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnExecutar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -85,6 +98,7 @@
         private System.Windows.Forms.DateTimePicker dthDataVenda;
         private System.Windows.Forms.Button btnExecutar;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnSair;
     }
 }
 

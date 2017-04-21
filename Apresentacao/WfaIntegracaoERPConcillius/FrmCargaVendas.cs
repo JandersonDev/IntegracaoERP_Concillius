@@ -96,6 +96,13 @@ namespace WfaIntegracaoERPConcillius
                 else
                 {
                     this.vendas = RetornaListaVendasPDV();
+
+                    if (this.vendas.Count == 0)
+                    {
+                        MessageBox.Show("Não existem vendas nessa data!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
                     Gravar(historico);
                 }
 
@@ -177,6 +184,11 @@ namespace WfaIntegracaoERPConcillius
             if (dthDataVenda.Value.Date >= DateTime.Now.Date) return false;
 
             return true;
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
