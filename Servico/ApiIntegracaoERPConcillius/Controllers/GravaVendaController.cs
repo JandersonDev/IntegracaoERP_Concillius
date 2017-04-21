@@ -43,10 +43,15 @@ namespace ApiIntegracaoERPConcillius.Controllers
 
             foreach (var venda in vendas)
             {
-                int retorno = repositorio.Gravar(historico, venda);
+                string retorno = repositorio.Gravar(venda, idHistoricoAtualizacao, nomeDbCompleto);
+
+                if (retorno != string.Empty)
+                {
+                    return Ok(retorno);
+                }
             }
 
-            return Ok(0);
+            return Ok(idHistoricoAtualizacao.ToString());
         }
     }
 }
