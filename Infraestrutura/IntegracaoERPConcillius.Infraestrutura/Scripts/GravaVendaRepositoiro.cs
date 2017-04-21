@@ -52,11 +52,11 @@ namespace IntegracaoERPConcillius.Infraestrutura.Repositorio
             return vendas;
         }
 
-        public string Gravar(VendasPdvDTO venda, int idHistoricoAtualizacao, string nomeBanco)
+        public string Gravar(VendasPdvDTO venda, int idHistoricoAtualizacao, string nomeBanco, string layout)
         {
             try
             {   
-                var query = GravaVendaScript.Movimentacao();
+                var query = GravaVendaScript.Movimentacao(layout);
 
                 var parametros = new { NOMEBANCO = nomeBanco, IDENTITY = idHistoricoAtualizacao, DATAVENDA = venda.datasessaocaixa.ToShortDateString(), CD_MVE = venda.CD_MVE, COD_LOJA = venda.Cod_loja,  NSU = venda.NSU, NUMPARCELAS = venda.NUMPARCELAS, VALOR = venda.VALOR };
 

@@ -17,6 +17,7 @@ namespace WfaIntegracaoERPConcillius
         private string UrlBase;
         private Acesso acesso;
         private List<VendasPdvDTO> vendas;
+        private string Layout;
 
         public FrmCargaVendas()
         {
@@ -28,6 +29,7 @@ namespace WfaIntegracaoERPConcillius
         {
             FormatarData();
             this.CNPJ = LerCNPJRegedit();
+            this.Layout = LerLayoutRegedit();
             UrlBase = ConfigurationManager.AppSettings["UrlServicoBase"];
         }
 
@@ -39,6 +41,22 @@ namespace WfaIntegracaoERPConcillius
                 using (var key = hklm.OpenSubKey(ConfigurationManager.AppSettings["CaminhoRegedit"]))
                 {
                     return key.GetValue("CNPJ").ToString();
+                }
+            }
+            catch (Exception)
+            {
+                return string.Empty;
+            }
+        }
+
+        private string LerLayoutRegedit()
+        {
+            try
+            {
+                using (var hklm = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64))
+                using (var key = hklm.OpenSubKey(ConfigurationManager.AppSettings["CaminhoRegedit"]))
+                {
+                    return key.GetValue("LAYOUT").ToString();
                 }
             }
             catch (Exception)
@@ -65,6 +83,12 @@ namespace WfaIntegracaoERPConcillius
             if (this.CNPJ == string.Empty)
             {
                 MessageBox.Show("Erro ao ler chave CNPJ no regedit!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (this.Layout == string.Empty)
+            {
+                MessageBox.Show("Erro ao ler chave LAYOUT no regedit!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -121,7 +145,7 @@ namespace WfaIntegracaoERPConcillius
             try
             {
                 var data = dthDataVenda.Value.ToShortDateString();
-                var param = "GravaVenda/Gravar?historico=" + historico + "&dataVenda=" + data + "&nomeDbCompleto=" + this.acesso.NomeDbCompleto;
+                var param = "GravaVenda/Gravar?historico=" + historico + "&dataVenda=" + data + "&nomeDbCompleto=" + this.acesso.NomeDbCompleto + "&layout=" + this.Layout;
                 var resposta = RequisicaoHttp.Post(UrlBase,param, this.vendas);
                 var retorno = resposta.Content.ReadAsAsync<int>().Result;
                 return;

@@ -37,13 +37,13 @@ namespace ApiIntegracaoERPConcillius.Controllers
 
         }
         [HttpPost]
-        public IHttpActionResult Gravar(int historico, List<VendasPdvDTO> vendas, string dataVenda, string nomeDbCompleto)
+        public IHttpActionResult Gravar(int historico, List<VendasPdvDTO> vendas, string dataVenda, string nomeDbCompleto, string layout)
         {
             int idHistoricoAtualizacao = repositorio.GerarIdHistoricoAtualizacao(historico, dataVenda, nomeDbCompleto);
 
             foreach (var venda in vendas)
             {
-                string retorno = repositorio.Gravar(venda, idHistoricoAtualizacao, nomeDbCompleto);
+                string retorno = repositorio.Gravar(venda, idHistoricoAtualizacao, nomeDbCompleto, layout);
 
                 if (retorno != string.Empty)
                 {

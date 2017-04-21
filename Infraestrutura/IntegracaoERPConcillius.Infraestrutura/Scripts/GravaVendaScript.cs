@@ -39,22 +39,50 @@ namespace IntegracaoERPConcillius.Infraestrutura.Scripts
             return sql.ToString();
         }
 
-        public static string Movimentacao()
+        public static string Movimentacao(string layout)
         {
             var sql = new StringBuilder();
+
+            switch (layout)
+            {
+                case "1":
+                    sql.AppendLine(" DECLARE @SQL VARCHAR(MAX) = '' ")
+                       .AppendLine(" SET @SQL = ' SET DATEFORMAT DMY	 ")
+                       .AppendLine(" INSERT INTO  ' + @NOMEBANCO + '.DBO.VENDAS_PDV ")
+                       .AppendLine(" (ID_EMPRESA, ID_ADMINISTRADORA, ID_FILIAL, DATA_VENDA, ")
+                       .AppendLine(" TIPO_AUTENTICACAO, QUANTIDADE_PARCELAS, QUANTIDADE_CUPONS, VALOR_VENDA, ")
+                       .AppendLine(" ID_HISTORICO_ATUALIZACAO, ID_ADMINISTRADORA_ANTERIOR, ECF, DATA_VENDA_ANTERIOR, ")
+                       .AppendLine(" USUARIO_INCLUSAO, DATA_INCLUSAO, USUARIO_ALTERACAO, DATA_ALTERACAO, CT_LOCK) ")
+                       .AppendLine(" SELECT  1, ' + CONVERT(VARCHAR(MAX),@CD_MVE) + ', ' + CONVERT(VARCHAR(MAX),@COD_LOJA) + ', ''' + CONVERT(VARCHAR(MAX),@DATAVENDA) + ''', CASE WHEN ' + @NSU + ' <> 0 THEN ''A'' ELSE ''M'' END AS TIPO_AUTENTICACAO, 			")
+                       .AppendLine(" ' + CONVERT(VARCHAR(MAX),@NUMPARCELAS) + ', 1, ' + CONVERT(VARCHAR(MAX),@VALOR) + ', ' + CONVERT(VARCHAR(MAX),@IDENTITY) + ', NULL, ' + @NSU + ' AS ECF, NULL, 1, ''' + CONVERT(VARCHAR(MAX),GETDATE()) + ''', 1, ''' + CONVERT(VARCHAR(MAX),GETDATE()) + ''', 0' ")
+                       .AppendLine("  EXEC(@SQL) ");
+                    break;
+                case "2":
+                    sql.AppendLine(" DECLARE @SQL VARCHAR(MAX) = '' ")
+                       .AppendLine(" SET @SQL = ' SET DATEFORMAT DMY	 ")
+                       .AppendLine(" INSERT INTO  ' + @NOMEBANCO + '.DBO.VENDAS_PDV ")
+                       .AppendLine(" (ID_EMPRESA, ID_ADMINISTRADORA, ID_FILIAL, DATA_VENDA, ")
+                       .AppendLine(" TIPO_AUTENTICACAO, QUANTIDADE_PARCELAS, QUANTIDADE_CUPONS, VALOR_VENDA, ")
+                       .AppendLine(" ID_HISTORICO_ATUALIZACAO, ID_ADMINISTRADORA_ANTERIOR, ECF, DATA_VENDA_ANTERIOR, ")
+                       .AppendLine(" USUARIO_INCLUSAO, DATA_INCLUSAO, USUARIO_ALTERACAO, DATA_ALTERACAO, CT_LOCK) ")
+                       .AppendLine(" SELECT  1, ' + CONVERT(VARCHAR(MAX),@CD_MVE) + ', ' + CONVERT(VARCHAR(MAX),@COD_LOJA) + ', ''' + CONVERT(VARCHAR(MAX),@DATAVENDA) + ''', CASE WHEN ' + @NSU + ' <> 0 THEN ''A'' ELSE ''M'' END AS TIPO_AUTENTICACAO, 			")
+                       .AppendLine(" ' + CONVERT(VARCHAR(MAX),@NUMPARCELAS) + ', 1, ' + CONVERT(VARCHAR(MAX),@VALOR) + ', ' + CONVERT(VARCHAR(MAX),@IDENTITY) + ', NULL, ' + @NSU + ' AS ECF, NULL, 1, ''' + CONVERT(VARCHAR(MAX),GETDATE()) + ''', 1, ''' + CONVERT(VARCHAR(MAX),GETDATE()) + ''', 0' ")
+                       .AppendLine("  EXEC(@SQL) ");
+                    break;
+                default:
+                    sql.AppendLine(" DECLARE @SQL VARCHAR(MAX) = '' ")
+                      .AppendLine(" SET @SQL = ' SET DATEFORMAT DMY	 ")
+                      .AppendLine(" INSERT INTO  ' + @NOMEBANCO + '.DBO.VENDAS_PDV ")
+                      .AppendLine(" (ID_EMPRESA, ID_ADMINISTRADORA, ID_FILIAL, DATA_VENDA, ")
+                      .AppendLine(" TIPO_AUTENTICACAO, QUANTIDADE_PARCELAS, QUANTIDADE_CUPONS, VALOR_VENDA, ")
+                      .AppendLine(" ID_HISTORICO_ATUALIZACAO, ID_ADMINISTRADORA_ANTERIOR, ECF, DATA_VENDA_ANTERIOR, ")
+                      .AppendLine(" USUARIO_INCLUSAO, DATA_INCLUSAO, USUARIO_ALTERACAO, DATA_ALTERACAO, CT_LOCK) ")
+                      .AppendLine(" SELECT  1, ' + CONVERT(VARCHAR(MAX),@CD_MVE) + ', ' + CONVERT(VARCHAR(MAX),@COD_LOJA) + ', ''' + CONVERT(VARCHAR(MAX),@DATAVENDA) + ''', CASE WHEN ' + @NSU + ' <> 0 THEN ''A'' ELSE ''M'' END AS TIPO_AUTENTICACAO, 			")
+                      .AppendLine(" ' + CONVERT(VARCHAR(MAX),@NUMPARCELAS) + ', 1, ' + CONVERT(VARCHAR(MAX),@VALOR) + ', ' + CONVERT(VARCHAR(MAX),@IDENTITY) + ', NULL, ' + @NSU + ' AS ECF, NULL, 1, ''' + CONVERT(VARCHAR(MAX),GETDATE()) + ''', 1, ''' + CONVERT(VARCHAR(MAX),GETDATE()) + ''', 0' ")
+                      .AppendLine("  EXEC(@SQL) ");
+                    break;
+            }
             
-            sql.AppendLine(" DECLARE @SQL VARCHAR(MAX) = '' ")
-               .AppendLine(" SET @SQL = ' SET DATEFORMAT DMY	 ")
-               .AppendLine(" INSERT INTO  ' + @NOMEBANCO + '.DBO.VENDAS_PDV ")
-               .AppendLine(" (ID_EMPRESA, ID_ADMINISTRADORA, ID_FILIAL, DATA_VENDA, ")
-               .AppendLine(" TIPO_AUTENTICACAO, QUANTIDADE_PARCELAS, QUANTIDADE_CUPONS, VALOR_VENDA, ")
-               .AppendLine(" ID_HISTORICO_ATUALIZACAO, ID_ADMINISTRADORA_ANTERIOR, ECF, DATA_VENDA_ANTERIOR, ")
-               .AppendLine(" USUARIO_INCLUSAO, DATA_INCLUSAO, USUARIO_ALTERACAO, DATA_ALTERACAO, CT_LOCK) ")
-               .AppendLine(" SELECT  1, ' + CONVERT(VARCHAR(MAX),@CD_MVE) + ', ' + CONVERT(VARCHAR(MAX),@COD_LOJA) + ', ''' + CONVERT(VARCHAR(MAX),@DATAVENDA) + ''', CASE WHEN ' + @NSU + ' <> 0 THEN ''A'' ELSE ''M'' END AS TIPO_AUTENTICACAO, 			")
-               .AppendLine(" ' + CONVERT(VARCHAR(MAX),@NUMPARCELAS) + ', 1, ' + CONVERT(VARCHAR(MAX),@VALOR) + ', ' + CONVERT(VARCHAR(MAX),@IDENTITY) + ', NULL, ' + @NSU + ' AS ECF, NULL, 1, ''' + CONVERT(VARCHAR(MAX),GETDATE()) + ''', 1, ''' + CONVERT(VARCHAR(MAX),GETDATE()) + ''', 0' ")
-               .AppendLine("  EXEC(@SQL) ");
-
-
             return sql.ToString();
         }
 
