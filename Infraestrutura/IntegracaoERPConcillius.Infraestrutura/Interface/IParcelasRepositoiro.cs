@@ -12,8 +12,8 @@ namespace IntegracaoERPConcillius.Infraestrutura.Interface
     public interface IParcelasRepositoiro
     {
         int Verificar(string data, string nomeDbCompleto);
-        string Gravar(VendasPdvDTO venda, int idHistoricoAtualizacao, string nomeBanco, string layout);
-        int GerarIdHistoricoAtualizacao(int hitorico, string dataVenda, string nomeDbCompleto);
+        string Gravar(ParcelasPdvDTO parcela, int idHistoricoAtualizacao, string nomeBanco, string layout);
+        int GerarIdHistoricoAtualizacao(int hitorico, string data, string nomeDbCompleto);
         List<ParcelasPdvDTO> spParcelasPdv(string data, Acesso acesso);
     }
 }

@@ -56,17 +56,17 @@ namespace IntegracaoERPConcillius.Infraestrutura.Repositorio
             return vendas;
         }
 
-        public string Gravar(VendasPdvDTO venda, int idHistoricoAtualizacao, string nomeBanco, string layout)
+        public string Gravar(ParcelasPdvDTO parcela, int idHistoricoAtualizacao, string nomeBanco, string layout)
         {
             try
             {   
-                var query = GravaVendaScript.Movimentacao(layout);
+                var query = ParcelasScript.Movimentacao(layout);
 
-                var parametros = new { NOMEBANCO = nomeBanco, IDENTITY = idHistoricoAtualizacao, DATAVENDA = venda.datasessaocaixa.ToShortDateString(), CD_MVE = venda.CD_MVE, COD_LOJA = venda.Cod_loja,  NSU = venda.NSU, NUMPARCELAS = venda.NUMPARCELAS, VALOR = venda.VALOR };
+               // var parametros = new { NOMEBANCO = nomeBanco, IDENTITY = idHistoricoAtualizacao, DATAVENDA = venda.datasessaocaixa.ToShortDateString(), CD_MVE = venda.CD_MVE, COD_LOJA = venda.Cod_loja,  NSU = venda.NSU, NUMPARCELAS = venda.NUMPARCELAS, VALOR = venda.VALOR };
 
                 using (var conexao = new SqlConnection(this.stringConexao))
                 {
-                    conexao.Query<string>(query, parametros);
+                  //  conexao.Query<string>(query, parametros);
                 }
 
                 return string.Empty;
@@ -77,15 +77,15 @@ namespace IntegracaoERPConcillius.Infraestrutura.Repositorio
             }
         }
 
-        public int GerarIdHistoricoAtualizacao(int hitorico, string dataVenda, string nomeDbCompleto)
+        public int GerarIdHistoricoAtualizacao(int hitorico, string data, string nomeDbCompleto)
         {
             try
             {
                 int retorno = 0;
 
-                var query = GravaVendaScript.GerarIdHistoricoAtualizacao();
+                var query = ParcelasScript.GerarIdHistoricoAtualizacao();
 
-                var parametros = new { ID_HISTORICO = hitorico, DATAVENDA = dataVenda, NOME_BD_COMPLETO = nomeDbCompleto};
+                var parametros = new { ID_HISTORICO = hitorico, DATAVENDA = data, NOME_BD_COMPLETO = nomeDbCompleto};
 
                 using (var conexao = new SqlConnection(this.stringConexao))
                 {

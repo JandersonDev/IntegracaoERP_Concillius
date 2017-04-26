@@ -39,5 +39,23 @@ namespace ApiIntegracaoERPConcillius.Controllers
 
             return Ok(retorno);
         }
+
+        [HttpPost]
+        public IHttpActionResult Gravar(int historico, List<ParcelasPdvDTO> parcelas, string data, string nomeDbCompleto, string layout)
+        {
+            int idHistoricoAtualizacao = repositorio.GerarIdHistoricoAtualizacao(historico, data, nomeDbCompleto);
+
+            //foreach (var parcela in parcelas)
+            //{
+            //    string retorno = repositorio.Gravar(parcela, idHistoricoAtualizacao, nomeDbCompleto, layout);
+
+            //    if (retorno != string.Empty)
+            //    {
+            //        return Ok(retorno);
+            //    }
+            //}
+
+            return Ok(idHistoricoAtualizacao.ToString());
+        }
     }
 }

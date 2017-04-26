@@ -110,7 +110,7 @@ namespace WfaIntegracaoERPConcillius
                     if (MessageBox.Show("Carga já efetuada, deseja sobrepor?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         this.parcelas = RetornaListaParcelasPDV();
-                       // Gravar(historico);
+                        Gravar(historico);
                     }
                     else
                     {
@@ -128,7 +128,7 @@ namespace WfaIntegracaoERPConcillius
                         return;
                     }
 
-                    //Gravar(historico);
+                    Gravar(historico);
                 }
 
                 MessageBox.Show("Operação efetuada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -141,23 +141,21 @@ namespace WfaIntegracaoERPConcillius
             }
         }
 
-        //private void Gravar(int historico)
-        //{
-        //    try
-        //    {
-        //        var data = dthDataVenda.Value.ToShortDateString();
-        //        var param = "GravaVenda/Gravar?historico=" + historico + "&dataVenda=" + data + "&nomeDbCompleto=" + this.acesso.NomeDbCompleto + "&layout=" + this.Layout;
-        //        var resposta = RequisicaoHttp.Post(UrlBase,param, this.vendas);
-        //        var retorno = resposta.Content.ReadAsAsync<int>().Result;
-        //        return;
-        //    }
-        //    catch (Exception)
-        //    {
-
-        //        throw;
-        //    }
-        //    throw new NotImplementedException();
-        //}
+        private void Gravar(int historico)
+        {
+            try
+            {
+                var data = dthDataVenda.Value.ToShortDateString();
+                var param = "Parcelas/Gravar?historico=" + historico + "&data=" + data + "&nomeDbCompleto=" + this.acesso.NomeDbCompleto + "&layout=" + this.Layout;
+                var resposta = RequisicaoHttp.Post(UrlBase, param, this.parcelas);
+                var retorno = resposta.Content.ReadAsAsync<int>().Result;
+                return;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         private List<ParcelasPdvDTO> RetornaListaParcelasPDV()
         {
