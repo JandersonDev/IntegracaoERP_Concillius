@@ -27,5 +27,16 @@ namespace WfaIntegracaoERPConcillius
             var form = new FrmCargaVendas();
             form.ShowDialog();
         }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void financeiroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new FrmParcelas();
+            form.ShowDialog();
+        }
     }
 }

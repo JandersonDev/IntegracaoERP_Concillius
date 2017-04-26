@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IntegracaoERPConcillius.Infraestrutura.Scripts
 {
-    public static class GravaVendaScript
+    public static class ParcelasScript
     {
         public static string Verificar()
         {
@@ -20,7 +20,7 @@ namespace IntegracaoERPConcillius.Infraestrutura.Scripts
             sql.AppendLine(" declare @sql varchar(max)  ")
                .AppendLine(" declare @NomeBanco varchar(max)  ")
                .AppendLine(" set @NomeBanco = @NOME_BD_COMPLETO  ")
-               .AppendLine(" set @sql = 'set dateformat dmy select id_historico_atualizacao from ' + @NomeBanco + '.dbo.historico_atualizacao where TIPO_ATUALIZACAO = ''O'' and ID_ADMINISTRADORA = 1 and DATA_MOVIMENTO = ''' + @DATAVENDA + ''''  ")
+               .AppendLine(" set @sql = 'set dateformat dmy select id_historico_atualizacao from ' + @NomeBanco + '.dbo.historico_atualizacao where TIPO_ATUALIZACAO = ''Z'' and ID_ADMINISTRADORA = 1 and DATA_MOVIMENTO = ''' + @DATAVENDA + ''''  ")
                .AppendLine(" exec(@sql)  ");
             
             return sql.ToString();
@@ -33,12 +33,26 @@ namespace IntegracaoERPConcillius.Infraestrutura.Scripts
             //sql.AppendLine("EXEC BABY_CENTER..sp_ws_Vendas_PDV @DATA");
 
             sql.AppendLine(" declare @sql varchar(max) ")
-               //.AppendLine(" set @sql = 'set dateformat dmy EXEC ' + @BANCO + '.dbo.sp_ws_Vendas_PDV ''' + @DATA + '''' ")
-               .AppendLine(" set @sql = 'set dateformat dmy EXEC dbo.sp_ws_Vendas_PDV ''' + @DATA + '''' ")
+               .AppendLine(" set @sql = 'set dateformat dmy EXEC ' + @BANCO + '.dbo.sp_ws_Vendas_PDV ''' + @DATA + '''' ")
                .AppendLine(" exec(@sql) ");
 
             return sql.ToString();
         }
+
+        public static string spParcelasPdv()
+        {
+            var sql = new StringBuilder();
+
+            //sql.AppendLine("EXEC BABY_CENTER..sp_ws_Vendas_PDV @DATA");
+
+            sql.AppendLine(" declare @sql varchar(max) ")
+               //.AppendLine(" set @sql = 'set dateformat dmy EXEC ' + @BANCO + '.dbo.sp_ws_Parcelas_PDV ''' + @DATA + '''' ")
+               .AppendLine(" set @sql = 'set dateformat dmy EXEC dbo.sp_ws_Parcelas_PDV ''' + @DATA + '''' ")
+               .AppendLine(" exec(@sql) ");
+
+            return sql.ToString();
+        }
+
 
         public static string Movimentacao(string layout)
         {

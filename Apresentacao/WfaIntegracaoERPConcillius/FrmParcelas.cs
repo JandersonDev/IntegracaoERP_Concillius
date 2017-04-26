@@ -8,18 +8,19 @@ using System.Net.Http;
 using System.Collections.Generic;
 using IntegracaoERPConcillius.Dominio.Acesso;
 using IntegracaoERPConcillius.Dominio.GravaVenda;
+using IntegracaoERPConcillius.Dominio.Parcelas;
 
 namespace WfaIntegracaoERPConcillius
 {
-    public partial class FrmCargaVendas : Form
+    public partial class FrmParcelas : Form
     {
         private string CNPJ;
         private string UrlBase;
         private Acesso acesso;
-        private List<VendasPdvDTO> vendas;
+        private List<ParcelasPdvDTO> parcelas;
         private string Layout;
 
-        public FrmCargaVendas()
+        public FrmParcelas()
         {
             InitializeComponent();
             IniciarFormulario();
@@ -108,8 +109,8 @@ namespace WfaIntegracaoERPConcillius
                 {
                     if (MessageBox.Show("Carga já efetuada, deseja sobrepor?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        this.vendas = RetornaListaVendasPDV();
-                        Gravar(historico);
+                        this.parcelas = RetornaListaParcelasPDV();
+                       // Gravar(historico);
                     }
                     else
                     {
@@ -119,15 +120,15 @@ namespace WfaIntegracaoERPConcillius
                 }
                 else
                 {
-                    this.vendas = RetornaListaVendasPDV();
+                    this.parcelas = RetornaListaParcelasPDV();
 
-                    if (this.vendas.Count == 0)
+                    if (this.parcelas.Count == 0)
                     {
-                        MessageBox.Show("Não existem vendas nessa data!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Não existem parcelas nessa data!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
 
-                    Gravar(historico);
+                    //Gravar(historico);
                 }
 
                 MessageBox.Show("Operação efetuada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -140,36 +141,37 @@ namespace WfaIntegracaoERPConcillius
             }
         }
 
-        private void Gravar(int historico)
+        //private void Gravar(int historico)
+        //{
+        //    try
+        //    {
+        //        var data = dthDataVenda.Value.ToShortDateString();
+        //        var param = "GravaVenda/Gravar?historico=" + historico + "&dataVenda=" + data + "&nomeDbCompleto=" + this.acesso.NomeDbCompleto + "&layout=" + this.Layout;
+        //        var resposta = RequisicaoHttp.Post(UrlBase,param, this.vendas);
+        //        var retorno = resposta.Content.ReadAsAsync<int>().Result;
+        //        return;
+        //    }
+        //    catch (Exception)
+        //    {
+
+        //        throw;
+        //    }
+        //    throw new NotImplementedException();
+        //}
+
+        private List<ParcelasPdvDTO> RetornaListaParcelasPDV()
         {
             try
             {
                 var data = dthDataVenda.Value.ToShortDateString();
-                var param = "GravaVenda/Gravar?historico=" + historico + "&dataVenda=" + data + "&nomeDbCompleto=" + this.acesso.NomeDbCompleto + "&layout=" + this.Layout;
-                var resposta = RequisicaoHttp.Post(UrlBase,param, this.vendas);
-                var retorno = resposta.Content.ReadAsAsync<int>().Result;
-                return;
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-            throw new NotImplementedException();
-        }
-
-        private List<VendasPdvDTO> RetornaListaVendasPDV()
-        {
-            try
-            {
-                var data = dthDataVenda.Value.ToShortDateString();
-                var param = "GravaVenda/spVendasPdv?dataVenda=" + data;
+                var param = "Parcelas/spParcelasPdv?data=" + data;
                 var resposta = RequisicaoHttp.Post(UrlBase, param, this.acesso);
-                return resposta.Content.ReadAsAsync<List<VendasPdvDTO>>().Result;
+                var retorno = resposta.Content.ReadAsAsync<List<ParcelasPdvDTO>>().Result;
+                return retorno;
             }
             catch (Exception)
             {
-                throw new Exception("Erro no método spVendasPdv api grava venda!");
+                throw new Exception("Erro no método spParcelasPdv api grava venda!");
             }
         }
 
@@ -178,13 +180,13 @@ namespace WfaIntegracaoERPConcillius
             try
             {
                 var data = dthDataVenda.Value.ToShortDateString();
-                var param = "GravaVenda/Verificar?dataVenda=" + data + "&nomeDbCompleto=" + this.acesso.NomeDbCompleto;
+                var param = "Parcelas/Verificar?data=" + data + "&nomeDbCompleto=" + this.acesso.NomeDbCompleto;
                 var resposta = RequisicaoHttp.Get(UrlBase, param);
                 return resposta.Content.ReadAsAsync<int>().Result;
             }
             catch (Exception)
             {
-                throw new Exception("Erro no método verficar api grava venda!");
+                throw new Exception("Erro no método verficar api parcelas!");
             }
         }
 

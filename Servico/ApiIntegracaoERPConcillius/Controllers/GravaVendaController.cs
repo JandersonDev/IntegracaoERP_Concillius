@@ -8,6 +8,7 @@ using System.Web;
 using System.Net;
 using System.Web.Http;
 using System.Net.Http;
+using IntegracaoERPConcillius.Dominio.Acesso;
 //using System.Web.Mvc;
 
 namespace ApiIntegracaoERPConcillius.Controllers
@@ -28,13 +29,12 @@ namespace ApiIntegracaoERPConcillius.Controllers
             int retorno = repositorio.Verificar(dataVenda, nomeDbCompleto);
             return Ok(retorno);
         }
-        [HttpGet]
-        public IHttpActionResult spVendasPdv(string dataVenda, string nomeDbCompleto)
-        {
-            List<VendasPdvDTO> retorno = repositorio.spVendasPdv(dataVenda, nomeDbCompleto);
+        [HttpPost]
+        public IHttpActionResult spVendasPdv(string dataVenda, Acesso acesso)
+        { 
+            List<VendasPdvDTO> retorno = repositorio.spVendasPdv(dataVenda, acesso);
 
             return Ok(retorno);
-
         }
         [HttpPost]
         public IHttpActionResult Gravar(int historico, List<VendasPdvDTO> vendas, string dataVenda, string nomeDbCompleto, string layout)

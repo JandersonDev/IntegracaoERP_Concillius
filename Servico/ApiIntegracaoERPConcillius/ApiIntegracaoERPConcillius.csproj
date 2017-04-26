@@ -138,6 +138,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Classes\RequisicaoHttp.cs" />
+    <Compile Include="Controllers\ParcelasController.cs" />
     <Compile Include="Controllers\AcessoController.cs" />
     <Compile Include="Controllers\GravaVendaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />

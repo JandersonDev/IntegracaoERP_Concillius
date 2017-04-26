@@ -45,11 +45,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interface\IAcessoRepositorio.cs" />
+    <Compile Include="Interface\IParcelasRepositoiro.cs" />
     <Compile Include="Interface\IGravaVendaRepositoiro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorio\AcessoRepositorio.cs" />
-    <Compile Include="Scripts\GravaVendaRepositoiro.cs" />
+    <Compile Include="Repositorio\ParcelasRepositoiro.cs" />
+    <Compile Include="Repositorio\GravaVendaRepositoiro.cs" />
     <Compile Include="Scripts\AcessoScript.cs" />
+    <Compile Include="Scripts\ParcelasScript.cs" />
     <Compile Include="Scripts\GravaVendaScript.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -9,15 +9,18 @@ using System.Data.SqlClient;
 using IntegracaoERPConcillius.Infraestrutura.Scripts;
 using IntegracaoERPConcillius.Infraestrutura.Interface;
 using IntegracaoERPConcillius.Dominio.GravaVenda;
+using IntegracaoERPConcillius.Dominio.Acesso;
 
 namespace IntegracaoERPConcillius.Infraestrutura.Repositorio
 {
     public class GravaVendaRepositoiro : IGravaVendaRepositoiro
     {
         public string stringConexao { get; set; }
+        public string stringConexaoCliente { get; set; }
         public GravaVendaRepositoiro()
         {
             this.stringConexao = ConfigurationManager.ConnectionStrings["IntegracaoContext"].ConnectionString;
+            this.stringConexaoCliente = ConfigurationManager.ConnectionStrings["ClienteContext"].ConnectionString;
         }
 
         public int Verificar(string dataVenda, string nomeDbCompleto)
@@ -36,15 +39,15 @@ namespace IntegracaoERPConcillius.Infraestrutura.Repositorio
             return idHistorico;
         }
 
-        public List<VendasPdvDTO> spVendasPdv(string dataVenda, string nomeBanco)
+        public List<VendasPdvDTO> spVendasPdv(string dataVenda, Acesso acesso)
         {
             List<VendasPdvDTO> vendas = new List<VendasPdvDTO>();
 
             var query = GravaVendaScript.spVendasPdv();
 
-            var parametros = new { DATA = dataVenda, BANCO = nomeBanco};
+            var parametros = new { DATA = dataVenda}; //, BANCO = nomeBanco
 
-            using (var conexao = new SqlConnection(this.stringConexao))
+            using (var conexao = new SqlConnection(string.Format(this.stringConexaoCliente, acesso.NomeDbCliente, acesso.UsuarioCliente, acesso.SenhaCliente, acesso.ServidorCliente)))
             {
                 vendas = conexao.Query<VendasPdvDTO>(query, parametros).ToList();
             }
